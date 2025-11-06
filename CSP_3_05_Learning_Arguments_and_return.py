@@ -4,14 +4,13 @@
 
 #modify the below function such that it asks the user for 2 numbers as input.
 #Then have it print out the larger number
-def larger():
-    n1=int(input("Enter the first number: "))
-    n2=int(input("Enter the second number: "))
+def larger(n1,n2):
+
     if n1>n2:
         return n1
     else:
         return n2
-print(larger())
+print(larger(5,8))
 
 #Modify the below function such that it asks for the users score as an input.
 #Then based on the score print out a letter grade.
@@ -20,43 +19,38 @@ print(larger())
 # 70+ C
 # 60+ D
 # 59- F
-def grade():
-    g = int(input("Give me your grade"))
-    if( g>=90):
+def grade(score):
+    if(score>=90):
         return "A"
-    elif( g>= 80):
+    elif(score>=80):
         return "B"
-    elif(g >= 70):
+    elif(score>=70):
         return "C"
-    elif(g >= 60):
+    elif(score>=60):
         return "D"
     else:
         return "F"
-print (grade())
+print(grade(85))
 
 #Modify the below function such that it asks the user for a number then
 #if the number is divisible by 3 print "fizz"
 #if the number is divisible by 5 print "buzz"
 #if both are the case then print "Fizzbuzz" instead of the prior two
 #if niether are the case print the number.
-def fizzBuzz():
-    n = input("Give me a number")
-    n = int(n)
+def fizzBuzz(n):
     if n%3==0 and n%5==0:
         return "FizzBuzz"
     if n%3==0:
         return "Fizz"
     if n%5==0:
         return "Buzz"
-print(fizzBuzz())
+print(fizzBuzz(15))
 
 #modify the below function such that it asks the user for an input number.
 #if the number is even divide it by two.
 #if the number is odd multiply it by 3 and add 1
 #then print the new number.
-def collatz():
-    n = input("Give me a number")
-    n = int(n)
+def collatz(n):
     if(n==1):
         return 1
     if(n%2==0):
@@ -64,17 +58,13 @@ def collatz():
     else:
         return (3*n+1)
 
-print(collatz())
-
-
-
+print(collatz(1))
 
 #Modify the below function such that it asks the user for a temperature.
 #The format for temperature should end in F For Fahrenheit and C for Celcius
 #Then given the temperature if it is in Fahrenheit convert it to Celsius on vice versa
 #Example 32F -> 0C  20C -> 68F
 def convertTemperature(temperature):
-    #input = input("Give me a temperature")
     number=int(temperature[:-1 ])
     unit=temperature[-1]
 
@@ -83,4 +73,4 @@ def convertTemperature(temperature):
     elif unit=="F":
         return str(int((number-32) *5/9))+"C"
 
-print(convertTemperature(input("Enter the temperature: ")))
+print(convertTemperature("32F"))
