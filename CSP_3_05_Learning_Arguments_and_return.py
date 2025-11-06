@@ -40,10 +40,12 @@ print(grade(85))
 def fizzBuzz(n):
     if n%3==0 and n%5==0:
         return "FizzBuzz"
-    if n%3==0:
+    elif n%3==0:
         return "Fizz"
-    if n%5==0:
+    elif n%5==0:
         return "Buzz"
+    else:
+        return n
 print(fizzBuzz(15))
 
 #modify the below function such that it asks the user for an input number.
