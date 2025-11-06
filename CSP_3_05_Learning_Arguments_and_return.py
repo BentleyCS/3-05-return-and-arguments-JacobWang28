@@ -39,11 +39,11 @@ print(grade(85))
 #if niether are the case print the number.
 def fizzBuzz(n):
     if n%3==0 and n%5==0:
-        return "FizzBuzz"
+        return "fizzbuzz"
     elif n%3==0:
-        return "Fizz"
+        return "fizz"
     elif n%5==0:
-        return "Buzz"
+        return "buzz"
     else:
         return n
 print(fizzBuzz(15))
